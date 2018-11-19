@@ -1,3 +1,6 @@
+#coding: utf-8
+__author__ = "Lário dos Santos Diniz"
+
 class BootParameterError(Exception):
     """
     Class that throws an error when the parameter passed at startup is invalid.

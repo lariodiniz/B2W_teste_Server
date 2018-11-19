@@ -1,10 +1,13 @@
+#coding: utf-8
+__author__ = "Lário dos Santos Diniz"
+
 from os import path
 from flask import Flask
 
 from .custom_errors import BootParameterError
 
-#from .blueprints.noticias import noticicas_blueprint
-#from .db import db
+from .planets import planets
+from .db import db
 
 class StarWarsServer(Flask):
 
@@ -51,11 +54,8 @@ class StarWarsServer(Flask):
         if self.mode == 'testing':
             self.config['TESTING'] = True
 
-        # app.register_blueprint(noticicas_blueprint)
-
-        # Bootstrap(app)
-        # db.init_app(app)
-
+        self.register_blueprint(planets)
+        db.init_app(self)
         # The initial route that informs when the application is functional
         @self.route('/')
         def hello():
