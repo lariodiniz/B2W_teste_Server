@@ -2,12 +2,12 @@
 __author__ = "Lário dos Santos Diniz"
 
 from os import path
-from flask import Flask
+from flask import Flask, jsonify
 
 from .custom_errors import BootParameterError
-
-from .planets import planets
 from .db import db
+from .planets import planets
+
 
 class StarWarsServer(Flask):
 
@@ -19,6 +19,7 @@ class StarWarsServer(Flask):
 
         self.mode = mode.lower()
 
+        # checks the instance type and loads the specified folder
         if self.mode in ['development', 'production']:
             pasta = path.join(path.abspath(path.dirname(__file__)), "{}_instance".format(self.mode))
 
@@ -35,18 +36,10 @@ class StarWarsServer(Flask):
 
         #calls the init method of the parent class passing some initial parameters
         super(StarWarsServer, self).__init__("star_wars_server", instance_path=instance_path,
-                                             instance_relative_config=True)
+                                            instance_relative_config=True)
 
         #loads the environment settings
         self.config.from_pyfile('config.cfg')
-
-        if self.mode in ['development', 'production']:
-            #sets the folder where the media files will be
-            self.config['MEDIA_ROOT'] = path.join(
-                path.dirname(__file__),
-                self.instance_path,
-                self.config.get('MEDIA_FOLDER')
-            )
 
         #defines the environment
         self.config['ENV'] = mode
@@ -56,8 +49,12 @@ class StarWarsServer(Flask):
 
         self.register_blueprint(planets)
         db.init_app(self)
+
+
         # The initial route that informs when the application is functional
         @self.route('/')
         def hello():
-            return 'Application is working.'
+
+            return jsonify({"response": "Application is working."})
+
 
