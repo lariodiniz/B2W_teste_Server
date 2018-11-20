@@ -1,2 +1,0 @@
-graft sw_server/production_instance
-global-exclude *.pyc
