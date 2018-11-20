@@ -3,6 +3,8 @@ StarWarsPlanet
 
     Api REST feito em Python utilizando o microframeowrk Flask que pode conter os dados de planetas do Star Wars 
 
+- Versão Atual 1.0.0.0
+
 Técnologias Utilizadas
 -
 - Python 3.7.1 
