@@ -49,4 +49,4 @@ Licença
 
 ![Python](https://github.com/lariodiniz/StarWarsPlanet/blob/master/imgs/python_logo.png)
 ![Flask](https://github.com/lariodiniz/StarWarsPlanet/blob/master/imgs/flask_logo.jpg)
-![Mongodb](https://github.com/lariodiniz/StarWarsPlanet/blob/master/imgs/mongodb_logo.png)
+![Mongodb](https://github.com/lariodiniz/StarWarsPlanet/blob/master/imgs/mongo_logo.png)
