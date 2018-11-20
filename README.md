@@ -5,7 +5,7 @@ StarWarsPlanet
 
 Técnologias Utilizadas
 -
-- Python 3.7.1
+- Python 3.7.1 ![Python](https://github.com/lariodiniz/StarWarsPlanet/blob/develop/imgs/python_logo.png)
 - MongoDB
 - Flask
 - Para mais informações veja [Requeriments](https://github.com/lariodiniz/StarWarsPlanet/blob/master/requeriments.txt) 
