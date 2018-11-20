@@ -45,6 +45,6 @@ Licença
 -
 [MIT](https://github.com/lariodiniz/StarWarsPlanet/blob/master/LICENSE.md)
 
-![Python](https://github.com/lariodiniz/StarWarsPlanet/blob/develop/imgs/python_logo.png)
-![Flask](https://github.com/lariodiniz/StarWarsPlanet/blob/develop/imgs/flask_logo.jpg)
-![Mongodb](https://github.com/lariodiniz/StarWarsPlanet/blob/develop/imgs/mongodb_logo.png)
+![Python](https://github.com/lariodiniz/StarWarsPlanet/blob/master/imgs/python_logo.png)
+![Flask](https://github.com/lariodiniz/StarWarsPlanet/blob/master/imgs/flask_logo.jpg)
+![Mongodb](https://github.com/lariodiniz/StarWarsPlanet/blob/master/imgs/mongodb_logo.png)
